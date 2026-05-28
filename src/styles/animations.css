@@ -1,0 +1,47 @@
+@keyframes tt-scanline {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+}
+
+@keyframes tt-glow-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(0, 188, 212, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(0, 188, 212, 0.55));
+  }
+}
+
+.tt-scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.tt-scanline::after {
+  content: '';
+  position: absolute;
+  inset: -40% 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 188, 212, 0.08),
+    transparent
+  );
+  animation: tt-scanline 1.35s linear infinite;
+  pointer-events: none;
+}
+
+.tt-glow-pulse {
+  animation: tt-glow-pulse 1.2s ease-in-out infinite;
+}
+

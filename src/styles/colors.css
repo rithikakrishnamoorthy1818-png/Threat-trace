@@ -1,0 +1,19 @@
+:root {
+  --tt-bg: #0a0e27;
+  --tt-panel: #16213e;
+  --tt-panel2: #1a1a2e;
+  --tt-text: #e0e0e0;
+  --tt-muted: rgba(224, 224, 224, 0.72);
+  --tt-border: rgba(0, 188, 212, 0.22);
+
+  --tt-primary: #ff1744;
+  --tt-danger: #ff1744;
+  --tt-cyan: #00bcd4;
+  --tt-success: #00ff41;
+  --tt-warning: #ff9100;
+
+  --tt-shadow-red: 0 0 24px rgba(255, 23, 68, 0.35);
+  --tt-shadow-cyan: 0 0 24px rgba(0, 188, 212, 0.3);
+  --tt-shadow-green: 0 0 24px rgba(0, 255, 65, 0.25);
+}
+

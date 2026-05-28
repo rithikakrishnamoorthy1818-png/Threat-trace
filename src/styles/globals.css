@@ -1,0 +1,46 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--tt-bg);
+  color: var(--tt-text);
+  font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+}
+
+::selection {
+  background: rgba(255, 23, 68, 0.35);
+}
+
+.tt-grid-bg {
+  background-image: linear-gradient(rgba(0, 188, 212, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 188, 212, 0.05) 1px, transparent 1px);
+  background-size: 36px 36px;
+  background-position: -1px -1px;
+}
+
+.tt-noise {
+  position: relative;
+}
+.tt-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  opacity: 0.12;
+}
+
+.tt-terminal {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+  background: rgba(10, 14, 39, 0.55);
+  border: 1px solid rgba(0, 188, 212, 0.22);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
